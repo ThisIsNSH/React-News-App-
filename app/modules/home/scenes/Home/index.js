@@ -37,8 +37,8 @@ class Home extends React.Component {
         else {
             return (
                 <FlatList
-                    style={{backgroundColor:'#eaeaea'}}
-                    contentContainerStyle={{paddingVertical:5,}}
+                    style={{backgroundColor:'#ffffff'}}
+                    contentContainerStyle={{paddingVertical:10,}}
                     ref='listRef'
                     data={articles}
                     extraData={this.state}

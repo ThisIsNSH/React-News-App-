@@ -5,6 +5,14 @@ export const {padding, color, fontSize, fontFamily } = theme;
 const styles = StyleSheet.create({
     container:{
         flex: 1,
+        borderColor: color.lightGrey,
+        borderWidth: 1,
+        backgroundColor: color.white,
+        borderRadius: 10,
+        shadowOpacity: 1,
+        shadowColor: color.lightGrey,
+        shadowRadius: 5,
+        padding: 4,
         marginVertical: 5,
         marginHorizontal: 10
     },
@@ -12,36 +20,40 @@ const styles = StyleSheet.create({
     wrapper:{
         padding: padding,
         flexDirection: "row",
-        backgroundColor:"white"
     },
 
     img:{
         height: 75,
         width: 75,
+        borderRadius: 10,
+        alignSelf: 'center',
         backgroundColor: color.light_grey,
-        marginRight: padding * 1.5
+        marginLeft: padding * 1.5
     },
 
     info:{
         flex:1
+
     },
 
     title:{
         fontSize: fontSize.regular,
-        fontFamily: fontFamily.bold,
+        fontFamily: fontFamily.regular,
         color: color.black,
+        
     },
 
     bottom:{
         flexDirection: "row",
         flex:1,
-        marginTop:padding * 2,
+        marginTop: padding * 2,
+        alignSelf: 'flex-start'
     },
 
     source:{
         fontSize: fontSize.small,
         fontFamily: fontFamily.bold,
-        color: color.main
+        color: color.green
     },
 
     date:{

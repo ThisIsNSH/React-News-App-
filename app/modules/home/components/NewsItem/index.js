@@ -12,12 +12,9 @@ const NewsItem = ({article}) => {
         <TouchableHighlight
             style={styles.container}
             underlayColor={"transparent"}
-            onPress={() => Actions.Article({article, title})}>
+            onPress={() => Actions.Article({article, title: 'NEWS DETAILS'})}>
+                
             <View style={[styles.wrapper]}>
-
-                {
-                    article.urlToImage && <Image source={{uri: article.urlToImage}} style={styles.img}/>
-                }
 
                 <View style={[styles.info]}>
                     <Text style={[styles.title]}>
@@ -25,14 +22,19 @@ const NewsItem = ({article}) => {
                     </Text>
 
                     <View style={[styles.bottom]}>
-                        <Text style={[styles.source]} onPress={() => Actions.Source({source, title: source.name})}>
+                        <Text style={[styles.source]} onPress={() => Actions.Source({source, title: 'SOURCE'})}>
                             {source.name}
                         </Text>
                         <Text style={[styles.date]}>
                             {moment(publishedAt).fromNow()}
                         </Text>
-                    </View>
+                    </View>                    
                 </View>
+
+                    {
+                        article.urlToImage && <Image source={{uri: article.urlToImage}} style={styles.img}/>
+                    }
+
             </View>
         </TouchableHighlight>
     );

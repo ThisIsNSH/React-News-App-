@@ -45,7 +45,7 @@ class Source extends React.Component {
         else {
             return (
                 <FlatList
-                    style={{backgroundColor:'#eaeaea'}}
+                    style={{backgroundColor:'#ffffff'}}
                     contentContainerStyle={{paddingVertical:5,}}
                     ref='listRef'
                     data={articles}
